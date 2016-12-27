@@ -1,0 +1,25 @@
+
+	<dl class="author">
+		<dt ng-show='load'>本周推荐</dt>
+		<dd ng-repeat='rec in recs'>
+			<div class="avatar">
+				<img src="{{rec.avatar}}" alt="">
+			</div>
+			<div class="info">
+				<h5>{{rec.name}}</h5>
+				<p>{{rec.alt}}</p>
+			</div>
+		</dd>
+
+		<dt ng-show='load'>热门作者</dt>
+		<dd ng-repeat='all in alls'>
+			<div class="avatar">
+				<img src="{{all.avatar}}" alt="">
+			</div>
+			<div class="info">
+				<h5>{{all.name}}</h5>
+				<p>{{all.alt}}</p>
+			</div>
+		</dd>
+
+	</dl>
