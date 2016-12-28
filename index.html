@@ -1,10 +1,35 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 330px;
+            height: 475px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .box::before{
+            content: "";
+            height: 475px;
+            width: 80px;
+            background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0));
+            position: absolute;
+            transform: skew(-25deg); /*让它斜切*/
+            left:-180px;
+        }
+        .box:hover:before{
+            left: 500px;
+            transition: all 1s;/*防止过渡再走回去*/
+        }
+    </style>
 </head>
 <body>
-	<h1>GITHUB</h1>
+<div class='box'>
+    <img src="images/jd.jpg" alt=""/>
+    <h1>京东扫光的效果</h1>
+</div>
 </body>
 </html>
